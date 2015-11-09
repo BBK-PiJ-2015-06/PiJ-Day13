@@ -27,12 +27,12 @@ public interface User {
 	 *
 	 * @param libraryName the name of the library that the User is to register with
 	 */
-	void register(Library libraryName);
+	void register(Library library);
 	
 	/**
 	 * Retrieves the library that this User is a member of.
 	 *
 	 * @return the name of the library that this User is a member of
 	 */
-	Library getLibrary();
+	String getLibrary();
 }
