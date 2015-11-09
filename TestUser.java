@@ -9,7 +9,7 @@ public class TestUser {
 	@Before
 	public void setUp() {
 		newUser = new UserImpl("Name");
-		lib = new Library();
+		lib = new LibraryImpl("Birkbeck");
 	}
 	
 	@Test
@@ -26,8 +26,8 @@ public class TestUser {
 	public void testsRegistration() {
 		assertEquals(null, newUser.getLibrary());
 		newUser.register(lib);
-		assertEquals("Library", newUser.getLibrary());
-		assertEquals(1, newUser.getLibraryId());
+		assertEquals("Birkbeck", newUser.getLibrary());
+		assertEquals(0, newUser.getLibraryId());
 	}
 
 }
