@@ -21,4 +21,18 @@ public interface User {
 	 */
 	int getLibraryId();
 	
+	/**
+	 * Enables a user to register with a library and receive a 
+	 * library ID specific to this library.
+	 *
+	 * @param libraryName the name of the library that the User is to register with
+	 */
+	void register(Library libraryName);
+	
+	/**
+	 * Retrieves the library that this User is a member of.
+	 *
+	 * @return the name of the library that this User is a member of
+	 */
+	Library getLibrary();
 }
