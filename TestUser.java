@@ -23,20 +23,11 @@ public class TestUser {
 	}
 	
 	@Test 
-	public void testsRetrievalOfLibraryName() {
+	public void testsRegistration() {
 		assertEquals(null, newUser.getLibrary());
-	}
-	
-	@Test
-	public void testsRetrievalOfUserLibraryIdAfterRegistration() {
-		newUser.register(lib);
-		assertEquals(1, newUser.getLibraryId());
-	}
-	
-	@Test
-	public void testsRetrievalOfLibraryNameAfterRegistration() {
 		newUser.register(lib);
 		assertEquals("Library", newUser.getLibrary());
+		assertEquals(1, newUser.getLibraryId());
 	}
-	
+
 }
