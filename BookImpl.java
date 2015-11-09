@@ -9,11 +9,11 @@ public class BookImpl implements Book {
 	}
 	
 	public String getTitle() {
-		return null;
+		return this.title;
 	}
 	
 	public String getAuthor() {
-		return null;
+		return this.author;
 	}
 	
 } 
