@@ -4,12 +4,12 @@ import static org.junit.Assert.*;
 public class TestUser {
 	
 	private User newUser;
-	private LibraryMock lib;
+	private Library lib;
 	
 	@Before
 	public void setUp() {
 		newUser = new UserImpl("Name");
-		lib = new LibraryMock();
+		lib = new Library();
 	}
 	
 	@Test
@@ -30,7 +30,7 @@ public class TestUser {
 	@Test
 	public void testsRetrievalOfUserLibraryIdAfterRegistration() {
 		newUser.register(lib);
-		assertEquals(1, newUser.getLibraryId);
+		assertEquals(1, newUser.getLibraryId());
 	}
 	
 	@Test
