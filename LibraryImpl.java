@@ -1,13 +1,14 @@
 public class LibraryImpl implements Library {
 	
 	private String name;
+	private int maxBooksBorrowed;
 	
 	public LibraryImpl(String name) {
 		this.name = name;
 	}
 	
 	public String getName() {
-		return null;
+		return this.name;
 	}
 
 	public int getId() {
@@ -15,10 +16,14 @@ public class LibraryImpl implements Library {
 	}
 
 	public int getMaxBooksPerUser() {
-		return 0;
+		return this.maxBooksBorrowed;
 	}
 	
 
 	public void setMaxBooksPerUser(int max) {
+		if(this.name != null) {
+			this.maxBooksBorrowed = max;
+		}
 	}
+	
 }
