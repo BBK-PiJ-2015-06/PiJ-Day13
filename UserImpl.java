@@ -8,11 +8,11 @@ public class UserImpl implements User {
 	}
 	
 	public String getName() {
-		return null;
+		return this.name;
 	}
 	
 	public int getLibraryId() {
-		return 0;
+		return this.libraryID;
 	}
 	
 }
