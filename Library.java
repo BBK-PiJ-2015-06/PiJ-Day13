@@ -34,4 +34,12 @@ public interface Library {
 	 * @return the maximum number of books that each User is allowed to borrow
 	 */
 	int getMaxBooksPerUser();
+	
+	/**
+	 * Sets the maximum number of books that this Library allows
+	 * individual Users to borrow.
+	 *
+	 * @param max the maximum number of books that each User is allowed to borrow
+	 */
+	void setMaxBooksPerUser(int max);
 }
