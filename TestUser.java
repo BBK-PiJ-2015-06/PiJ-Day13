@@ -30,7 +30,7 @@ public class TestUser {
 	@Test
 	public void testsRetrievalOfUserLibraryIdAfterRegistration() {
 		newUser.register(lib);
-		assertEquals(01, newUser.getLibraryId);
+		assertEquals(1, newUser.getLibraryId);
 	}
 	
 	@Test
