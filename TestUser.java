@@ -15,4 +15,9 @@ public class TestUser {
 		assertEquals("Name", newUser.getName());
 	}
 	
+	@Test
+	public void testsRetrievalOfUserLibraryId() {
+		assertEquals(null, newUser.getLibraryId());
+	}
+	
 }
