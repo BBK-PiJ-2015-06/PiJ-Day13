@@ -7,6 +7,9 @@
  *
  * This last attribute enables unique library ID numbers to be presented 
  * to new users. 
+ *
+ * A Library that has been constructed with a null name is not able to issue 
+ * ID numbers to Users or enable books to be borrowed.
  */
 
 public interface Library {
@@ -19,13 +22,18 @@ public interface Library {
 	String getName();
 	
 	/**
-	 * Retrieves the number of the current library ID that is yet to be
-     * issued to a new registered User.
+	 * Retrieves the ID number of the User, if they exist as a registered
+	 * User with the library.
 	 *
-	 * @return the current library ID that has not yet been issued to a 
-	 *         registered User.
+	 * If the name of the User is not recognisable, this method retrieves 
+	 * the number of the current library ID that is yet to be issued and 
+	 * issues this ID number to the new registered User.
+	 *
+	 *@param userName the name of existing or new library User
+	 * @return the library ID of the User, or if the User has not yet been 
+	           registered, a new unique library ID
 	 */
-	int getId();
+	int getId(String userName);
 	
 	/**
 	 * Retrieves the maximum number of books that this Library allows
@@ -39,7 +47,10 @@ public interface Library {
 	 * Sets the maximum number of books that this Library allows
 	 * individual Users to borrow.
 	 *
+	 * This method does nothing if performed upon a Library with a null name.
+	 *
 	 * @param max the maximum number of books that each User is allowed to borrow
 	 */
 	void setMaxBooksPerUser(int max);
+
 }

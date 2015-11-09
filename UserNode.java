@@ -15,14 +15,6 @@ public interface UserNode {
 	User getUser();
 	
 	/**
-	 * Sets the User of this UserNode.
-	 *
-	 * @param user the user that the User of this UserNode is to 
-	 *        be set to
-	 */
-	void setUser(User user);
-	
-	/**
 	 * Retrieves the next UserNode
 	 *
 	 * @return the next UserNode

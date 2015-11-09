@@ -30,5 +30,14 @@ public class TestLibrary {
 		assertEquals(5, lib.getMaxBooksPerUser());
 	}
 	
+	@Test
+	public void testsGetId() {
+		assertEquals(0, lib.getId("Anne"));
+		assertEquals(1, lib.getId("Brian"));
+		assertEquals(0, lib.getId("Anne"));
+		assertEquals(2, lib.getId("Claire"));
+		assertEquals(3, lib.getId("David"));
+		assertEquals(1, lib.getId("Brian"));
+	}
 	
 }

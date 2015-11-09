@@ -59,11 +59,11 @@ public class RegisterImpl implements Register {
 				output = true;
 			} else {
 				UserNode temp = listStart;
-				while(this.listStart.getNext() != null) {
-					temp = temp.getNext();
+				while(temp.getNext() != null) {
 					if (temp.getUser().getName().equals(name)) {
 						output = true;
 					}
+					temp = temp.getNext();
 				}
 			}
 		}

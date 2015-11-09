@@ -2,17 +2,24 @@ public class LibraryImpl implements Library {
 	
 	private String name;
 	private int maxBooksBorrowed;
+	private Register libraryRegister;
 	
 	public LibraryImpl(String name) {
 		this.name = name;
+		this.libraryRegister = new RegisterImpl();
 	}
 	
 	public String getName() {
 		return this.name;
 	}
 
-	public int getId() {
-		return 0;
+	public int getId(String userName) {
+		if(this.libraryRegister.containsUser(userName)) {
+			return this.libraryRegister.getIndex(userName);
+		} else {
+			this.libraryRegister.addUser(userName);
+			return this.libraryRegister.getIndex(userName);
+		}
 	}
 
 	public int getMaxBooksPerUser() {
